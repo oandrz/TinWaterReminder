@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/timePickerFragment">
+
+    <fragment
+        android:id="@+id/timePickerFragment"
+        android:name="com.example.tinswaterreminderapp.TimePickerFragment"
+        android:label="TimePickerFragment" />
+</navigation>
