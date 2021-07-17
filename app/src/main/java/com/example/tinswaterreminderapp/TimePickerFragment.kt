@@ -20,9 +20,38 @@ internal class TimePickerFragment : Fragment() {
         return binding?.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupView()
+    }
+
     override fun onDestroyView() {
         binding = null
         super.onDestroyView()
+    }
+
+    private fun setupView() {
+        setupEtLunch()
+        setupEtDinner()
+        setupEtSleep()
+    }
+
+    private fun setupEtSleep() {
+        binding?.etSleepTime?.setOnClickListener {
+
+        }
+    }
+
+    private fun setupEtDinner() {
+        binding?.etDinnerTime?.setOnClickListener {
+
+        }
+    }
+
+    private fun setupEtLunch() {
+        binding?.etLunchTime?.setOnClickListener {
+
+        }
     }
 
     companion object {
