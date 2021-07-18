@@ -6,7 +6,6 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("androidx.navigation.safeargs.kotlin")
-    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -67,4 +66,6 @@ dependencies {
     val dagger_version = "2.37"
     implementation("com.google.dagger:dagger:$dagger_version")
     kapt("com.google.dagger:dagger-compiler:$dagger_version")
+    implementation("com.google.dagger:dagger-android-support:$dagger_version")
+    kapt("com.google.dagger:dagger-android-processor:$dagger_version")
 }
