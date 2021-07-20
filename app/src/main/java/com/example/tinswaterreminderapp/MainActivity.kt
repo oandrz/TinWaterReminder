@@ -2,6 +2,7 @@ package com.example.tinswaterreminderapp
 
 import android.os.Bundle
 import com.example.tinswaterreminderapp.databinding.ActivityMainBinding
+import com.example.tinswaterreminderapp.timepicker.TimePickerFragment
 import dagger.android.support.DaggerAppCompatActivity
 
 class MainActivity : DaggerAppCompatActivity() {

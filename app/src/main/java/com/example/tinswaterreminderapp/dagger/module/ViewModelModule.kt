@@ -1,7 +1,7 @@
 package com.example.tinswaterreminderapp.dagger.module
 
 import androidx.lifecycle.ViewModel
-import com.example.tinswaterreminderapp.TimePickerViewModel
+import com.example.tinswaterreminderapp.timepicker.TimePickerViewModel
 import com.example.tinswaterreminderapp.dagger.ViewModelKey
 import dagger.Binds
 import dagger.Module

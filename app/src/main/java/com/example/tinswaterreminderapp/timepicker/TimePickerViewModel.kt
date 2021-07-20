@@ -1,4 +1,4 @@
-package com.example.tinswaterreminderapp
+package com.example.tinswaterreminderapp.timepicker
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
