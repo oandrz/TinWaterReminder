@@ -5,7 +5,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:7.0.0-beta05")
+        classpath("com.android.tools.build:gradle:7.0.0-rc01")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.20")
         val nav_version = "2.3.5"
         classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")

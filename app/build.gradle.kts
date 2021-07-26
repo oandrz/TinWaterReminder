@@ -69,4 +69,13 @@ dependencies {
     kapt("com.google.dagger:dagger-compiler:$dagger_version")
     implementation("com.google.dagger:dagger-android-support:$dagger_version")
     kapt("com.google.dagger:dagger-android-processor:$dagger_version")
+
+    val preference_version = "1.1.1"
+    implementation("androidx.preference:preference-ktx:$preference_version")
+
+    val moshi_version = "1.12.0"
+    implementation("com.squareup.moshi:moshi:$moshi_version")
+    implementation("com.squareup.moshi:moshi-kotlin:$moshi_version")
+
+    implementation("com.jakewharton.timber:timber:4.7.1")
 }

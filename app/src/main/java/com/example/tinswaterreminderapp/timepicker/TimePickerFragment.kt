@@ -50,7 +50,7 @@ class TimePickerFragment : DaggerFragment() {
             viewModel.state.collect { state ->
                 when(state) {
                     is TimePickerState.ShowTimePicker -> {
-                        showTimePickerDialog(state.tresshold)
+                        showTimePickerDialog(state.treshold)
                     }
                     is TimePickerState.None -> { /** TODO: 20/7/21 Ignore **/  }
                     else -> throw IllegalStateException("State doesn't exist")
@@ -83,7 +83,7 @@ class TimePickerFragment : DaggerFragment() {
         }
     }
 
-    private fun showTimePickerDialog(event: TressholdEvent) {
+    private fun showTimePickerDialog(event: TresholdEvent) {
         val now = Calendar.getInstance()
         TimePickerDialog(
             requireContext(),

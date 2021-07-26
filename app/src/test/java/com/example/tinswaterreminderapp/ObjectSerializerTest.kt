@@ -1,5 +1,6 @@
 package com.example.tinswaterreminderapp
 
+import com.example.tinswaterreminderapp.util.serializer.ObjectSerializerImpl
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -9,9 +10,10 @@ import org.junit.Assert.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class ExampleUnitTest {
+class ObjectSerializerTest {
+
     @Test
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+
     }
 }
