@@ -1,7 +1,7 @@
-package com.example.tinswaterreminderapp.timepicker
+package com.example.tinswaterreminderapp.ui.timepicker
 
 import androidx.lifecycle.ViewModel
-import com.example.tinswaterreminderapp.model.param.TimePickerParam
+import com.example.tinswaterreminderapp.data.model.param.TimePickerParam
 import com.example.tinswaterreminderapp.usecase.SaveTimeEventUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

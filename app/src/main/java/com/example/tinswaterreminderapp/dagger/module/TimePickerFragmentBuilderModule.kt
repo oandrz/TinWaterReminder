@@ -1,6 +1,6 @@
 package com.example.tinswaterreminderapp.dagger.module
 
-import com.example.tinswaterreminderapp.timepicker.TimePickerFragment
+import com.example.tinswaterreminderapp.ui.timepicker.TimePickerFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

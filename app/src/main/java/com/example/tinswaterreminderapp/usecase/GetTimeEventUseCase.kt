@@ -1,7 +1,7 @@
 package com.example.tinswaterreminderapp.usecase
 
-import com.example.tinswaterreminderapp.model.param.TimePickerParam
-import com.example.tinswaterreminderapp.repository.TimeEventRepository
+import com.example.tinswaterreminderapp.data.model.param.TimePickerParam
+import com.example.tinswaterreminderapp.data.repository.TimeEventRepository
 import javax.inject.Inject
 
 class GetTimeEventUseCase @Inject constructor(

@@ -1,12 +1,12 @@
 package com.example.tinswaterreminderapp.dagger.module
 
 import android.app.Application
-import com.example.tinswaterreminderapp.datasource.DiskCache
-import com.example.tinswaterreminderapp.datasource.DiskCacheImpl
-import com.example.tinswaterreminderapp.datasource.LocalStorage
-import com.example.tinswaterreminderapp.datasource.LocalStorageImpl
-import com.example.tinswaterreminderapp.repository.TimeEventRepository
-import com.example.tinswaterreminderapp.repository.TimeEventRepositoryImpl
+import com.example.tinswaterreminderapp.data.datasource.DiskCache
+import com.example.tinswaterreminderapp.data.datasource.DiskCacheImpl
+import com.example.tinswaterreminderapp.data.datasource.LocalStorage
+import com.example.tinswaterreminderapp.data.datasource.LocalStorageImpl
+import com.example.tinswaterreminderapp.data.repository.TimeEventRepository
+import com.example.tinswaterreminderapp.data.repository.TimeEventRepositoryImpl
 import com.example.tinswaterreminderapp.util.serializer.ObjectSerializer
 import com.example.tinswaterreminderapp.util.serializer.ObjectSerializerImpl
 import com.squareup.moshi.Moshi

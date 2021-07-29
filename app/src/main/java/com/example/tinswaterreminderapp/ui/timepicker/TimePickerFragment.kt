@@ -1,4 +1,4 @@
-package com.example.tinswaterreminderapp.timepicker
+package com.example.tinswaterreminderapp.ui.timepicker
 
 import android.app.TimePickerDialog
 import android.os.Bundle

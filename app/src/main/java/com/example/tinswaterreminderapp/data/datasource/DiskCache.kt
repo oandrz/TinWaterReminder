@@ -1,4 +1,4 @@
-package com.example.tinswaterreminderapp.datasource
+package com.example.tinswaterreminderapp.data.datasource
 
 interface DiskCache {
     fun <T> get(key: String, type: Class<T>): T?

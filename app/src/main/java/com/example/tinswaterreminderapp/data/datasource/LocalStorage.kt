@@ -1,4 +1,4 @@
-package com.example.tinswaterreminderapp.datasource
+package com.example.tinswaterreminderapp.data.datasource
 
 interface LocalStorage {
     fun getString(key: String): String?

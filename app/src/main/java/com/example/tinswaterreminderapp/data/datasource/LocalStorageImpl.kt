@@ -1,4 +1,4 @@
-package com.example.tinswaterreminderapp.datasource
+package com.example.tinswaterreminderapp.data.datasource
 
 import android.content.Context
 import android.content.SharedPreferences

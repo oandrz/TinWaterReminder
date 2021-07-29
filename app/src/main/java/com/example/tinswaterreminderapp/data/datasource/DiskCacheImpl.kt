@@ -1,4 +1,4 @@
-package com.example.tinswaterreminderapp.datasource
+package com.example.tinswaterreminderapp.data.datasource
 
 import com.example.tinswaterreminderapp.util.serializer.ObjectSerializer
 import javax.inject.Inject

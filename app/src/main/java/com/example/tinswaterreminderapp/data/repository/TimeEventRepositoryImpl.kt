@@ -1,7 +1,7 @@
-package com.example.tinswaterreminderapp.repository
+package com.example.tinswaterreminderapp.data.repository
 
-import com.example.tinswaterreminderapp.datasource.DiskCache
-import com.example.tinswaterreminderapp.model.param.TimePickerParam
+import com.example.tinswaterreminderapp.data.datasource.DiskCache
+import com.example.tinswaterreminderapp.data.model.param.TimePickerParam
 import javax.inject.Inject
 
 class TimeEventRepositoryImpl @Inject constructor(

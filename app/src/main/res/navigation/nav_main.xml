@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/timePickerFragment"
-        android:name="com.example.tinswaterreminderapp.timepicker.TimePickerFragment"
+        android:name="com.example.tinswaterreminderapp.ui.timepicker.TimePickerFragment"
         android:label="TimePickerFragment" />
 </navigation>
