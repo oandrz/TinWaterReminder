@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TimePicker
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.example.tinswaterreminderapp.databinding.FragmentTimePickerBinding
@@ -52,6 +53,9 @@ class TimePickerFragment : DaggerFragment() {
                     is TimePickerState.ShowTimePicker -> {
                         showTimePickerDialog(state.treshold)
                     }
+                    is TimePickerState.RenderTimePicker -> {
+                        renderTimePicker(state.treshold, state.time)
+                    }
                     is TimePickerState.None -> { /** TODO: 20/7/21 Ignore **/  }
                     else -> throw IllegalStateException("State doesn't exist")
                 }
@@ -93,6 +97,14 @@ class TimePickerFragment : DaggerFragment() {
             true
         )
         .show()
+    }
+
+    private fun renderTimePicker(event: TresholdEvent, time: String) {
+        when(event) {
+            TresholdEvent.LUNCH -> binding?.etLunchTime?.setText(time)
+            TresholdEvent.DINNER -> binding?.etDinnerTime?.setText(time)
+            TresholdEvent.SLEEP -> binding?.etSleepTime?.setText(time)
+        }
     }
 
     companion object {

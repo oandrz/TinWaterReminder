@@ -17,7 +17,7 @@ class MainActivity : DaggerAppCompatActivity() {
 
     private fun addTimeFragment() {
         supportFragmentManager.beginTransaction()
-            .add(
+            .replace(
                 R.id.container,
                 TimePickerFragment.newInstance(),
                 TimePickerFragment.TAG

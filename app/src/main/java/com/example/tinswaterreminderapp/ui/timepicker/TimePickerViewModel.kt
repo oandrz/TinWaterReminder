@@ -27,6 +27,7 @@ class TimePickerViewModel @Inject constructor(
 
     fun handleTimePickerSet(event: TresholdEvent, hoursOfTheDay: Int, minute: Int) {
         saveTimeEventUseCase.run(TimePickerParam(event, hoursOfTheDay, minute))
+        mutableState.value = TimePickerState.RenderTimePicker(event, "$hoursOfTheDay:$minute")
     }
 
     private fun showTimePicker(event: TresholdEvent) {
@@ -37,6 +38,7 @@ class TimePickerViewModel @Inject constructor(
 sealed class TimePickerState {
     object None: TimePickerState()
     class ShowTimePicker(val treshold: TresholdEvent) : TimePickerState()
+    class RenderTimePicker(val treshold: TresholdEvent, val time: String) : TimePickerState()
 }
 
 enum class TresholdEvent {
