@@ -5,10 +5,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TimePicker
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
+import com.example.tinswaterreminderapp.R
 import com.example.tinswaterreminderapp.databinding.FragmentTimePickerBinding
+import com.example.tinswaterreminderapp.ui.schedulelist.ScheduleListFragment
 import dagger.android.support.DaggerFragment
 import kotlinx.coroutines.flow.collect
 import java.lang.IllegalStateException
@@ -57,6 +60,9 @@ class TimePickerFragment : DaggerFragment() {
                         renderTimePicker(state.treshold, state.time)
                     }
                     is TimePickerState.None -> { /** TODO: 20/7/21 Ignore **/  }
+                    is TimePickerState.NavigateScheduleList -> {
+                        findNavController().navigate(R.id.action_timePickerFragment_to_scheduleListFragment)
+                    }
                     else -> throw IllegalStateException("State doesn't exist")
                 }
             }
@@ -67,6 +73,13 @@ class TimePickerFragment : DaggerFragment() {
         setupEtLunch()
         setupEtDinner()
         setupEtSleep()
+        setupSubmitButton()
+    }
+
+    private fun setupSubmitButton() {
+        binding?.buttonSubmit?.setOnClickListener {
+            viewModel.handleSubmitButtonClicked()
+        }
     }
 
     private fun setupEtSleep() {

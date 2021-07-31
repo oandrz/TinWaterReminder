@@ -13,6 +13,10 @@ class TimePickerViewModel @Inject constructor(
     private val mutableState: MutableStateFlow<TimePickerState> = MutableStateFlow(TimePickerState.None)
     val state: StateFlow<TimePickerState> = mutableState
 
+    fun handleSubmitButtonClicked() {
+        mutableState.value = TimePickerState.NavigateScheduleList
+    }
+
     fun handleEtSleepTime() {
         showTimePicker(TresholdEvent.SLEEP)
     }
@@ -36,9 +40,10 @@ class TimePickerViewModel @Inject constructor(
 }
 
 sealed class TimePickerState {
-    object None: TimePickerState()
+    object None : TimePickerState()
     class ShowTimePicker(val treshold: TresholdEvent) : TimePickerState()
     class RenderTimePicker(val treshold: TresholdEvent, val time: String) : TimePickerState()
+    object NavigateScheduleList : TimePickerState()
 }
 
 enum class TresholdEvent {

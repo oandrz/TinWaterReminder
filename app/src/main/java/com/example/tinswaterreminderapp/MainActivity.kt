@@ -12,15 +12,5 @@ class MainActivity : DaggerAppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        addTimeFragment()
-    }
-
-    private fun addTimeFragment() {
-        supportFragmentManager.beginTransaction()
-            .replace(
-                R.id.container,
-                TimePickerFragment.newInstance(),
-                TimePickerFragment.TAG
-            ).commit()
     }
 }

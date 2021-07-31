@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_main"
     app:startDestination="@id/timePickerFragment">
 
     <fragment
         android:id="@+id/timePickerFragment"
         android:name="com.example.tinswaterreminderapp.ui.timepicker.TimePickerFragment"
-        android:label="TimePickerFragment" />
+        android:label="TimePickerFragment"
+        tools:layout="@layout/fragment_time_picker" >
+        <action
+            android:id="@+id/action_timePickerFragment_to_scheduleListFragment"
+            app:destination="@id/scheduleListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/scheduleListFragment"
+        android:name="com.example.tinswaterreminderapp.ui.schedulelist.ScheduleListFragment"
+        android:label="ScheduleListFragment"
+        tools:layout="@layout/fragment_schedule_list" />
 </navigation>

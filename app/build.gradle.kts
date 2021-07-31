@@ -42,6 +42,8 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+
 }
 
 dependencies {
@@ -76,6 +78,23 @@ dependencies {
     val moshi_version = "1.12.0"
     implementation("com.squareup.moshi:moshi:$moshi_version")
     implementation("com.squareup.moshi:moshi-kotlin:$moshi_version")
+
+    val jetpack_compose = "1.0.0-rc02"
+    implementation("androidx.compose.ui:ui:$jetpack_compose")
+    // Tooling support (Previews, etc.)
+    implementation("androidx.compose.ui:ui-tooling:$jetpack_compose")
+    // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
+    implementation("androidx.compose.foundation:foundation:$jetpack_compose")
+    // Material Design
+    implementation("androidx.compose.material:material:$jetpack_compose")
+    // Material design icons
+    implementation("androidx.compose.material:material-icons-core:$jetpack_compose")
+    implementation("androidx.compose.material:material-icons-extended:$jetpack_compose")
+    // Integration with observables
+    implementation("androidx.compose.runtime:runtime-livedata:$jetpack_compose")
+
+    // UI Tests
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:$jetpack_compose")
 
     implementation("com.jakewharton.timber:timber:4.7.1")
 }
