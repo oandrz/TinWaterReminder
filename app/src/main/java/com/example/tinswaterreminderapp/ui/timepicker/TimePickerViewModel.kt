@@ -3,12 +3,14 @@ package com.example.tinswaterreminderapp.ui.timepicker
 import androidx.lifecycle.ViewModel
 import com.example.tinswaterreminderapp.data.model.param.TimePickerParam
 import com.example.tinswaterreminderapp.usecase.SaveTimeEventUseCase
+import com.example.tinswaterreminderapp.usecase.SaveTimeFlagUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import javax.inject.Inject
 
 class TimePickerViewModel @Inject constructor(
-    private val saveTimeEventUseCase: SaveTimeEventUseCase
+    private val saveTimeEventUseCase: SaveTimeEventUseCase,
+    private val saveTimeFlagUseCase: SaveTimeFlagUseCase
 ) : ViewModel() {
     private val mutableState: MutableStateFlow<TimePickerState> = MutableStateFlow(TimePickerState.None)
     val state: StateFlow<TimePickerState> = mutableState
@@ -35,6 +37,7 @@ class TimePickerViewModel @Inject constructor(
     }
 
     private fun showTimePicker(event: TresholdEvent) {
+        saveTimeFlagUseCase.run(true)
         mutableState.value = TimePickerState.ShowTimePicker(event)
     }
 }

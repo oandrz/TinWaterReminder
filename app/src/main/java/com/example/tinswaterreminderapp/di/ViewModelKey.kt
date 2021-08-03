@@ -1,4 +1,4 @@
-package com.example.tinswaterreminderapp.dagger
+package com.example.tinswaterreminderapp.di
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

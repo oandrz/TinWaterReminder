@@ -1,12 +1,11 @@
-package com.example.tinswaterreminderapp.dagger.module
+package com.example.tinswaterreminderapp.di.module
 
 import android.app.Application
 import com.example.tinswaterreminderapp.data.datasource.DiskCache
 import com.example.tinswaterreminderapp.data.datasource.DiskCacheImpl
 import com.example.tinswaterreminderapp.data.datasource.LocalStorage
 import com.example.tinswaterreminderapp.data.datasource.LocalStorageImpl
-import com.example.tinswaterreminderapp.data.repository.TimeEventRepository
-import com.example.tinswaterreminderapp.data.repository.TimeEventRepositoryImpl
+import com.example.tinswaterreminderapp.data.repository.*
 import com.example.tinswaterreminderapp.util.serializer.ObjectSerializer
 import com.example.tinswaterreminderapp.util.serializer.ObjectSerializerImpl
 import com.squareup.moshi.Moshi
@@ -29,6 +28,12 @@ abstract class ApplicationModule {
 
     @Binds
     abstract fun provideTimeEventRepository(impl: TimeEventRepositoryImpl): TimeEventRepository
+
+    @Binds
+    abstract fun provideScheduleListRepository(impl: ScheduleListRepositoryImpl): ScheduleListRepository
+
+    @Binds
+    abstract fun provideUserRepository(impl: UserRepositoryImpl): UserRepository
 
     companion object {
         @Provides

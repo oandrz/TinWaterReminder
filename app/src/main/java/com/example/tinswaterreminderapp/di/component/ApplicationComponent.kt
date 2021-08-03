@@ -1,11 +1,10 @@
-package com.example.tinswaterreminderapp.dagger.component
+package com.example.tinswaterreminderapp.di.component
 
 import android.app.Application
 import com.example.tinswaterreminderapp.MainApplication
-import com.example.tinswaterreminderapp.dagger.module.ActivityBuilderModule
-import com.example.tinswaterreminderapp.dagger.module.ApplicationModule
-import com.example.tinswaterreminderapp.dagger.module.TimePickerFragmentBuilderModule
-import com.example.tinswaterreminderapp.dagger.module.ViewModelFactoryModule
+import com.example.tinswaterreminderapp.di.module.ActivityBuilderModule
+import com.example.tinswaterreminderapp.di.module.ApplicationModule
+import com.example.tinswaterreminderapp.di.module.ViewModelFactoryModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector

@@ -1,4 +1,4 @@
-package com.example.tinswaterreminderapp.dagger.module
+package com.example.tinswaterreminderapp.di.module
 
 import com.example.tinswaterreminderapp.ui.timepicker.TimePickerFragment
 import dagger.Module

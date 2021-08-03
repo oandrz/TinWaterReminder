@@ -1,6 +1,6 @@
 package com.example.tinswaterreminderapp
 
-import com.example.tinswaterreminderapp.dagger.component.DaggerApplicationComponent
+import com.example.tinswaterreminderapp.di.component.DaggerApplicationComponent
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
 

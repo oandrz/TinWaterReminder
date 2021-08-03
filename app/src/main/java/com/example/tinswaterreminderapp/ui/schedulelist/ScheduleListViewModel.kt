@@ -1,4 +1,9 @@
 package com.example.tinswaterreminderapp.ui.schedulelist
 
-class ScheduleListViewModel {
+import androidx.lifecycle.ViewModel
+import javax.inject.Inject
+
+class ScheduleListViewModel @Inject constructor(
+
+) : ViewModel() {
 }

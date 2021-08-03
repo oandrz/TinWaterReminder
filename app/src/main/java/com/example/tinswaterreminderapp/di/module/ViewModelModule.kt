@@ -1,8 +1,8 @@
-package com.example.tinswaterreminderapp.dagger.module
+package com.example.tinswaterreminderapp.di.module
 
 import androidx.lifecycle.ViewModel
 import com.example.tinswaterreminderapp.ui.timepicker.TimePickerViewModel
-import com.example.tinswaterreminderapp.dagger.ViewModelKey
+import com.example.tinswaterreminderapp.di.ViewModelKey
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

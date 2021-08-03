@@ -1,7 +1,7 @@
-package com.example.tinswaterreminderapp.dagger.module
+package com.example.tinswaterreminderapp.di.module
 
 import androidx.lifecycle.ViewModelProvider
-import com.example.tinswaterreminderapp.dagger.ViewModelFactory
+import com.example.tinswaterreminderapp.di.ViewModelFactory
 import dagger.Binds
 import dagger.Module
 
