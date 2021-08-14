@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.tinswaterreminderapp.R
 import com.example.tinswaterreminderapp.databinding.FragmentTimePickerBinding
 import com.example.tinswaterreminderapp.ui.schedulelist.ScheduleListFragment
+import com.example.tinswaterreminderapp.util.alarm.AlarmReceiver
 import dagger.android.support.DaggerFragment
 import kotlinx.coroutines.flow.collect
 import java.lang.IllegalStateException
@@ -22,6 +23,9 @@ class TimePickerFragment : DaggerFragment() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
+
+    @Inject
+    lateinit var alarmReceiver: AlarmReceiver
 
     private val viewModel: TimePickerViewModel by lazy {
         ViewModelProvider(this, viewModelFactory).get(TimePickerViewModel::class.java)
@@ -62,6 +66,14 @@ class TimePickerFragment : DaggerFragment() {
                     is TimePickerState.None -> { /** TODO: 20/7/21 Ignore **/  }
                     is TimePickerState.NavigateScheduleList -> {
                         findNavController().navigate(R.id.action_timePickerFragment_to_scheduleListFragment)
+                    }
+                    is TimePickerState.SetAlarm -> {
+                        val cal = Calendar.getInstance()
+                        state.param[TresholdEvent.LUNCH]?.let {
+                            cal.set(Calendar.HOUR_OF_DAY, it.hoursOfTheDay)
+                            cal.set(Calendar.MINUTE, it.minute)
+                        }
+                        alarmReceiver.setAlarm(requireContext(), cal, TresholdEvent.LUNCH.hashCode())
                     }
                     else -> throw IllegalStateException("State doesn't exist")
                 }

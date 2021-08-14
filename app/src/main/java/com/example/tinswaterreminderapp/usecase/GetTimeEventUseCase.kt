@@ -8,7 +8,7 @@ class GetTimeEventUseCase @Inject constructor(
     private val repository: TimeEventRepository
 ) {
 
-    fun run(): TimePickerParam? {
-        return repository.getTimeEvent()
+    fun run(eventName: String): TimePickerParam {
+        return repository.getTimeEvent(eventName)!!
     }
 }

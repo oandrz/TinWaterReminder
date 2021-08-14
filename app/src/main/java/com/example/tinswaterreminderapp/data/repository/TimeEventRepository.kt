@@ -4,5 +4,5 @@ import com.example.tinswaterreminderapp.data.model.param.TimePickerParam
 
 interface TimeEventRepository {
     fun saveTimeEvent(param: TimePickerParam)
-    fun getTimeEvent(): TimePickerParam?
+    fun getTimeEvent(eventName: String): TimePickerParam?
 }
