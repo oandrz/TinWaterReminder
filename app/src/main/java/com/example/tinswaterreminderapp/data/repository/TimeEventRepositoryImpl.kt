@@ -9,7 +9,6 @@ class TimeEventRepositoryImpl @Inject constructor(
 ) : TimeEventRepository {
 
     override fun saveTimeEvent(param: TimePickerParam) {
-        diskCache.put(param.event.name, param, TimePickerParam::class.java)
     }
 
     override fun getTimeEvent(eventName: String): TimePickerParam? {

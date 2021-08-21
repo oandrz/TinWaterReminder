@@ -3,9 +3,7 @@ package com.example.tinswaterreminderapp
 import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
 import com.example.tinswaterreminderapp.databinding.ActivityMainBinding
-import com.example.tinswaterreminderapp.ui.timepicker.TimePickerFragment
 import com.example.tinswaterreminderapp.usecase.GetTimeFlagUseCase
-import com.example.tinswaterreminderapp.usecase.SaveTimeFlagUseCase
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 

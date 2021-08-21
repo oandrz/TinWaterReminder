@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TinsWaterReminderApp</string>
+    <string name="app_name">NeedAppName</string>
     <string name="labelLunchTimePicker">When do you usually have a lunch ?</string>
     <string name="labelDinnerTimePicker">When do you usually have a Dinner ?</string>
     <string name="labelSleepTimePicker">When do you usually sleep ?</string>

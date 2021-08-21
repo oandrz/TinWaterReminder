@@ -8,7 +8,7 @@ import dagger.android.ContributesAndroidInjector
 abstract class ActivityBuilderModule {
     @ContributesAndroidInjector(
         modules = [
-            TimePickerFragmentBuilderModule::class,
+            ChatListFragmentBuilder::class,
             ScheduleListFragmentBuilderModule::class,
             ViewModelModule::class
         ]

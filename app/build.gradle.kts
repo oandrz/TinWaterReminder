@@ -1,6 +1,3 @@
-import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
-import org.jetbrains.kotlin.config.KotlinCompilerVersion
-
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -42,19 +39,13 @@ android {
     buildFeatures {
         viewBinding = true
     }
-
-
 }
 
 dependencies {
     implementation("androidx.core:core-ktx:1.6.0")
     implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("com.google.android.material:material:1.4.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
-    implementation("com.wdullaer:materialdatetimepicker:4.2.3")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.0")
 
     val nav_version = "2.3.5"
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
@@ -79,7 +70,7 @@ dependencies {
     implementation("com.squareup.moshi:moshi:$moshi_version")
     implementation("com.squareup.moshi:moshi-kotlin:$moshi_version")
 
-    val jetpack_compose = "1.0.0-rc02"
+    val jetpack_compose = "1.0.1"
     implementation("androidx.compose.ui:ui:$jetpack_compose")
     // Tooling support (Previews, etc.)
     implementation("androidx.compose.ui:ui-tooling:$jetpack_compose")
@@ -93,8 +84,11 @@ dependencies {
     // Integration with observables
     implementation("androidx.compose.runtime:runtime-livedata:$jetpack_compose")
 
+    implementation("com.jakewharton.timber:timber:4.7.1")
+
     // UI Tests
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:$jetpack_compose")
-
-    implementation("com.jakewharton.timber:timber:4.7.1")
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.3")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 }
