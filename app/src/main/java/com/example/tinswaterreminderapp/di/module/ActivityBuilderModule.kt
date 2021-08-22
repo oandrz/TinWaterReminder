@@ -1,6 +1,8 @@
 package com.example.tinswaterreminderapp.di.module
 
 import com.example.tinswaterreminderapp.MainActivity
+import com.example.tinswaterreminderapp.di.module.fragment.ChatListFragmentBuilderModule
+import com.example.tinswaterreminderapp.di.module.fragment.ScheduleListFragmentBuilderModule
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -8,7 +10,7 @@ import dagger.android.ContributesAndroidInjector
 abstract class ActivityBuilderModule {
     @ContributesAndroidInjector(
         modules = [
-            ChatListFragmentBuilder::class,
+            ChatListFragmentBuilderModule::class,
             ScheduleListFragmentBuilderModule::class,
             ViewModelModule::class
         ]

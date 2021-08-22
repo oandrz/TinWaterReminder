@@ -1,4 +1,4 @@
-package com.example.tinswaterreminderapp.di.module
+package com.example.tinswaterreminderapp.di.module.fragment
 
 import com.example.tinswaterreminderapp.ui.schedulelist.ScheduleListFragment
 import dagger.Module
