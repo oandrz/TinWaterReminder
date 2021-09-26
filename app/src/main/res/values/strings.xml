@@ -3,5 +3,6 @@
     <string name="labelLunchTimePicker">When do you usually have a lunch ?</string>
     <string name="labelDinnerTimePicker">When do you usually have a Dinner ?</string>
     <string name="labelSleepTimePicker">When do you usually sleep ?</string>
+    <string name="hintEnterText">Enter your text here…</string>
     <string name="submit">Submit Time</string>
 </resources>

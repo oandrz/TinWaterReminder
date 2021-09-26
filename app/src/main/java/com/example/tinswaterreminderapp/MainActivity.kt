@@ -24,11 +24,7 @@ class MainActivity : DaggerAppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.container) as NavHostFragment
         val inflater = navHostFragment.navController.navInflater
         val graph = inflater.inflate(R.navigation.nav_main)
-        graph.startDestination = if (getTimeFlagUseCase.run()) {
-            R.id.scheduleListFragment
-        } else {
-            R.id.timePickerFragment
-        }
+        graph.startDestination = R.id.chatListFragment
         navHostFragment.navController.graph = graph
     }
 }

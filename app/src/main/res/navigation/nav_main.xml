@@ -2,14 +2,13 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_main"
-    app:startDestination="@id/timePickerFragment">
+    android:id="@+id/nav_main">
 
     <fragment
-        android:id="@+id/timePickerFragment"
+        android:id="@+id/chatListFragment"
         android:name="com.example.tinswaterreminderapp.ui.chatlist.ChatListFragment"
-        android:label="TimePickerFragment"
-        tools:layout="@layout/fragment_time_picker" >
+        android:label="ChatListFragment"
+        tools:layout="@layout/fragment_chat_list">
         <action
             android:id="@+id/action_timePickerFragment_to_scheduleListFragment"
             app:destination="@id/scheduleListFragment" />

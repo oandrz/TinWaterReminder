@@ -28,16 +28,23 @@ android {
             )
         }
     }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.0.1"
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = "11"
     }
 
     buildFeatures {
         viewBinding = true
+        compose = true
     }
 }
 
@@ -83,8 +90,13 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended:$jetpack_compose")
     // Integration with observables
     implementation("androidx.compose.runtime:runtime-livedata:$jetpack_compose")
+    // When using a MDC theme
+    implementation("com.google.android.material:compose-theme-adapter:$jetpack_compose")
 
     implementation("com.jakewharton.timber:timber:4.7.1")
+
+    val coilVersion = "1.3.2"
+    implementation("io.coil-kt:coil-compose:$coilVersion")
 
     // UI Tests
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:$jetpack_compose")
