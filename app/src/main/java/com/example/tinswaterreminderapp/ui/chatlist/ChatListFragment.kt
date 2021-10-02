@@ -33,9 +33,6 @@ class ChatListFragment : DaggerFragment() {
     * */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        activity?.window?.setSoftInputMode(
-            WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE or WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN
-        )
     }
 
     override fun onCreateView(
@@ -59,7 +56,6 @@ class ChatListFragment : DaggerFragment() {
     }
 
     override fun onDestroy() {
-        activity?.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
         super.onDestroy()
     }
 

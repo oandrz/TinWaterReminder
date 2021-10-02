@@ -1,6 +1,5 @@
 package com.example.tinswaterreminderapp.ui.chatlist
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.Arrangement.spacedBy
@@ -24,58 +23,78 @@ import androidx.compose.ui.unit.dp
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
 import coil.transform.CircleCropTransformation
-import com.example.tinswaterreminderapp.R
 import com.example.tinswaterreminderapp.R.*
+import com.google.accompanist.insets.navigationBarsWithImePadding
 
-@OptIn(ExperimentalUnitApi::class)
 @Preview
 @Composable
 fun ChatListContent() {
-    SimpleOutlinedTextFieldSample {
-        LazyColumn(Modifier.padding(bottom = 93.dp)) {
-            for (i in 0..10) {
-                item {
-                    if (i % 2 == 0) {
-                        ChatItemWithHeader()
-                    } else {
-                        ChatItem()
-                    }
+    Surface(
+        color = MaterialTheme.colors.background
+    ) {
+        Column(modifier = Modifier.fillMaxSize()) {
+            Messages(
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(
+                        start = dimensionResource(id = dimen.spacing_16),
+                        top = dimensionResource(id = dimen.spacing_16)
+                    )
+            )
+            SimpleOutlinedTextFieldSample()
+        }
+    }
+}
+
+@OptIn(ExperimentalUnitApi::class)
+@Composable
+fun Messages(modifier: Modifier) {
+    LazyColumn(modifier = modifier, reverseLayout = true) {
+        for (i in 0..20) {
+            item {
+                if (i % 2 == 0) {
+                    ChatItemWithHeader()
+                } else {
+                    ChatItem()
                 }
             }
         }
     }
 }
 
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun SimpleOutlinedTextFieldSample(content: @Composable (PaddingValues) -> Unit) {
+fun SimpleOutlinedTextFieldSample() {
     var text by remember { mutableStateOf("") }
 
     val scope = rememberCoroutineScope()
     val scaffoldState = rememberScaffoldState()
 
-    Scaffold(
-        scaffoldState = scaffoldState,
-        bottomBar = {
-            Card(
+    Card(
+        modifier = Modifier.navigationBarsWithImePadding()
+    ) {
+        Row {
+            OutlinedTextField(
+                value = text,
+                onValueChange = { text = it },
+                placeholder = { Text(stringResource(id = string.hintEnterText)) },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .wrapContentHeight(),
-                border = BorderStroke(1.dp, Color.Gray)
+                    .wrapContentHeight()
+                    .padding(dimensionResource(id = dimen.spacing_16))
+                    .weight(0.7f)
+            )
+            OutlinedButton(
+                onClick = {  },
+                modifier = Modifier
+                    .padding(
+                        end = dimensionResource(id = dimen.spacing_16)
+                    )
+                    .weight(0.3f)
+                    .align(Alignment.CenterVertically)
             ) {
-                OutlinedTextField(
-                    value = text,
-                    onValueChange = { text = it },
-                    placeholder = { Text(stringResource(id = string.hintEnterText)) },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .wrapContentHeight()
-                        .padding(dimensionResource(id = dimen.spacing_16))
-                )
+                Text(text = "Send")
             }
         }
-    ) {
-        content.invoke(it)
     }
 }
 
